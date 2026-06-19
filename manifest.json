@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "in-focus",
+  "version": "1.0.1",
+  "description": "Take back your attention span<3.",
+  "permissions": [
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}

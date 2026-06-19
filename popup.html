@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 270px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 16px;
+      background: linear-gradient(160deg, #e2f0fd 0%, #f0f7ff 100%);
+      color: #3a5f80;
+      min-height: 100px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .header-icon {
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #5b8fb9;
+      letter-spacing: 0.3px;
+    }
+
+    .header-sub {
+      font-size: 10px;
+      font-weight: 600;
+      color: #a0c4e8;
+      margin-top: 1px;
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(90deg, #cbe3f7, #ffffff, #cbe3f7);
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    input {
+      flex: 1;
+      padding: 8px 11px;
+      background: #ffffff;
+      border: 2px solid #cbe3f7;
+      color: #3a5f80;
+      border-radius: 14px;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(91, 143, 185, 0.08);
+    }
+
+    input::placeholder {
+      color: #b0d0ec;
+      font-weight: 500;
+    }
+
+    input:focus {
+      border-color: #5b8fb9;
+      box-shadow: 0 0 0 3px rgba(91, 143, 185, 0.15);
+    }
+
+    button#addBtn {
+      padding: 8px 13px;
+      background: linear-gradient(135deg, #5b8fb9, #7aaed4);
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      border-radius: 14px;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      box-shadow: 0 3px 10px rgba(91, 143, 185, 0.30);
+      transition: transform 0.15s, box-shadow 0.15s;
+      white-space: nowrap;
+    }
+
+    button#addBtn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 14px rgba(91, 143, 185, 0.38);
+    }
+
+    button#addBtn:active {
+      transform: translateY(0px);
+      box-shadow: 0 2px 6px rgba(91, 143, 185, 0.25);
+    }
+
+    ul#siteList {
+      list-style: none;
+      padding: 0;
+      max-height: 160px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    ul#siteList::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ul#siteList::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ul#siteList::-webkit-scrollbar-thumb {
+      background: #cbe3f7;
+      border-radius: 999px;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 7px 11px;
+      background: #ffffff;
+      border: 1.5px solid #e2f0fd;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #4a7fa8;
+      box-shadow: 0 2px 8px rgba(91, 143, 185, 0.07);
+      transition: box-shadow 0.2s;
+    }
+
+    li:hover {
+      box-shadow: 0 4px 14px rgba(91, 143, 185, 0.13);
+    }
+
+    .site-name {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .site-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #a8d5f5;
+      flex-shrink: 0;
+    }
+
+    .delete-btn {
+      background: none;
+      color: #f4a7b9;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1;
+      padding: 2px 5px;
+      border-radius: 6px;
+      transition: color 0.15s, background 0.15s;
+    }
+
+    .delete-btn:hover {
+      color: #e87d9a;
+      background: #fde8ee;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <span class="header-icon">
+      <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="13" cy="13" rx="11" ry="5" fill="#c4dcf5"/>
+        <ellipse cx="10" cy="11" rx="7" ry="5" fill="#daeefb"/>
+        <ellipse cx="16" cy="10" rx="6" ry="5" fill="#daeefb"/>
+        <ellipse cx="13" cy="8" rx="5" ry="5" fill="#eef6fd"/>
+      </svg>
+    </span>
+    <div>
+      <h3>in-focus</h3>
+      <div class="header-sub">stay soft, stay focused ~</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="input-row">
+    <input type="text" id="siteInput" placeholder="e.g. youtube.com">
+    <button id="addBtn">+ Block</button>
+  </div>
+
+  <ul id="siteList"></ul>
+
+  <script src="popup.js"></script>
+</body>
+</html>
