@@ -7,7 +7,7 @@
 
 ---
 
-**in-fcs** is a cutesy, lightweight site-blocker Chrome Extension built using Manifest V3 (MV3). It features a pastel cloud aesthetic designed to intercept distracting websites dynamically and keep your focus right where it belongs: on building great things!
+**in-focus** is a cutesy, lightweight site-blocker Chrome Extension built using Manifest V3 (MV3). It features a pastel cloud aesthetic designed to intercept distracting websites dynamically and keep your focus right where it belongs: on building great things!
 
 ## ✨ Features
 - **Dynamic Site Blocking:** Add or remove distracting URLs instantly using the pop-up panel—no hardcoded values or manual file reloads required.
